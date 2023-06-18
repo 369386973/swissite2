@@ -6,7 +6,6 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import React from 'react';
 import MyComponent from './components/MyComponent';
 
 const App: React.FC = () => {
