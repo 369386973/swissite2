@@ -12,9 +12,9 @@ import ScrollToTopButton from './ScrollToTopButton';
 const MyComponent: React.FC = () => {
   return (
     <div>
-      {/* ... 其他组件内容 ... */}
-      
-      {/* 在页面底部显示回到顶部按钮 */}
+     <button style={{position: 'fixed', bottom: '20px', right: '20px', zIndex: '9999', backgroundColor: '#000', color: '#fff', border: 'none', padding: '10px', borderRadius: '4px', cursor: 'pointer'}}>
+        
+      </button>
       <ScrollToTopButton showBelow={1200} />
     </div>
   );
