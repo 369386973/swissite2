@@ -73,7 +73,7 @@
   display: inline-flex;
   padding: 0.25em;
   margin-right: 1vw;
-  transition: color 500ms ease-out;
+  transition: color 700ms ease-out;
 }
 
 .settings a:last-of-type,
@@ -83,7 +83,7 @@
 
 .settings a:hover,
 .social a:hover {
-  transition: color 50ms ease-out;
+  transition: color 100ms ease-out;
 }
 
 .toggleDarkMode:hover {
@@ -159,7 +159,7 @@
   margin-right: 1vw;
   border-radius: 50%;
   background: transparent;
-  transition: all 250ms ease-out;
+  transition: all 700ms ease-out;
 }
 
 .pageActions a:last-of-type {
@@ -167,7 +167,7 @@
 }
 
 .pageActions a:hover {
-  transition: all 50ms ease-out;
+  transition: all 100ms ease-out;
 }
 
 .likeTweet:hover {
