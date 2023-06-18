@@ -55,8 +55,8 @@ export const FooterImpl: React.FC = () => {
      {config.twitter && (
   <a
     className={styles.twitter}
-    href={`https://www.notion.so${config.twitter}`}
-    title={`Twitter @${config.author}`}
+    href={`https://www.notion.so/${config.twitter}`}
+    title={`Notion @${config.author}`}
     target='_blank'
     rel='noopener noreferrer'
   >
@@ -103,8 +103,8 @@ export const FooterImpl: React.FC = () => {
         {config.linkedin && (
           <a
             className={styles.linkedin}
-            href={`https://www.linkedin.com/in/${config.author}`}
-            title={`LinkedIn ${config.author}`}
+            href={`https://vercel.com/${config.author}`}
+            title={`Vercel ${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
           >
