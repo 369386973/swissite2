@@ -1,7 +1,9 @@
+tsx
 import React, { useState, useEffect } from 'react';
 
 interface MyComponentProps {
-  // 在这里添加您的组件属性
+  // 添加一个属性来确保接口不为空
+  placeholder?: string;
 }
 
 const MyComponent: React.FC<MyComponentProps> = () => {
