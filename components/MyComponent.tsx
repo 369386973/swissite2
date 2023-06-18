@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-interface MyComponentProps {}
+interface MyComponentProps {
+  // 在这里添加您的组件属性
+}
 
 const MyComponent: React.FC<MyComponentProps> = () => {
   const [showButton, setShowButton] = useState(false);
