@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-}
-const MyComponent: React.FC = () => {
+type MyComponentProps = {};
+
+const MyComponent: React.FC<MyComponentProps> = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
