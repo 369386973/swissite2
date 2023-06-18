@@ -1,31 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
-interface ScrollToTopButtonProps {
-  showBelow: number;
 }
 
-const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ showBelow }) => {
+const ScrollToTopButton: React.FC = () => {
   const [showButton, setShowButton] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > showBelow) {
-        if (!showButton) {
-          setShowButton(true);
-        }
+      if (window.scrollY > 300) {
+        setShowButton(true);
       } else {
-        if (showButton) {
-          setShowButton(false);
-        }
+        setShowButton(false);
       }
     };
-    
-    document.addEventListener('scroll', handleScroll);
-    
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
-      document.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [showButton, showBelow]);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -35,13 +29,30 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ showBelow }) => {
   };
 
   return (
-    <>
+    <div>
+      {/* 其他组件的 JSX 内容 */}
+
+      {/* 返回顶部按钮 */}
       {showButton && (
-        <button className="scroll-to-top-button" onClick={scrollToTop}>
+        <button
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: '9999',
+            backgroundColor: '#000',
+            color: '#fff',
+            border: 'none',
+            padding: '10px',
+            borderRadius: '4px',
+            cursor: 'pointer',
+          }}
+          onClick={scrollToTop}
+        >
           返回顶部
         </button>
       )}
-    </>
+    </div>
   );
 };
 
