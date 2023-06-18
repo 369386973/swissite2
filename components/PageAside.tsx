@@ -7,20 +7,18 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
 import  ScrollToTopButton  from './ScrollToTopButton';
-
+import './styles.module.css';
 const App: React.FC = () => {
   return (
-    <div>
-      {/* 页面内容 */}
-      {/* ... */}
-      
-      {/* 回到顶部按钮 */}
+    <div className="app-container">
+      {/* 其他内容 */}
       <ScrollToTopButton />
     </div>
   );
 };
 
 export default App;
+
 export const PageAside: React.FC<{
   block: Block
   recordMap: ExtendedRecordMap
