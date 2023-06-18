@@ -4,7 +4,7 @@ import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
+import { SiNotion } from '@react-icons/all-files/si/SiNotion'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
@@ -35,7 +35,7 @@ export const FooterImpl: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright 2022 {config.author}</div>
+      <div className={styles.copyright}>Copyright 2023 {config.author}</div>
 
       <div className={styles.settings}>
         {hasMounted && (
@@ -52,16 +52,17 @@ export const FooterImpl: React.FC = () => {
       </div>
 
       <div className={styles.social}>
-        {config.twitter && (
-          <a
-            className={styles.twitter}
-            href={`https://twitter.com/${config.twitter}`}
-            title={`Twitter @${config.twitter}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaTwitter />
-          </a>
+     {config.twitter && (
+  <a
+    className={styles.twitter}
+    href={`https://www.notion.so${config.twitter}`}
+    title={`Twitter @${config.author}`}
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+   <SiNotion />
+  </a>
+
         )}
 
         {config.mastodon && (
@@ -91,7 +92,7 @@ export const FooterImpl: React.FC = () => {
           <a
             className={styles.github}
             href={`https://github.com/${config.github}`}
-            title={`GitHub @${config.github}`}
+            title={`GitHub @${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -102,7 +103,7 @@ export const FooterImpl: React.FC = () => {
         {config.linkedin && (
           <a
             className={styles.linkedin}
-            href={`https://www.linkedin.com/in/${config.linkedin}`}
+            href={`https://www.linkedin.com/in/${config.author}`}
             title={`LinkedIn ${config.author}`}
             target='_blank'
             rel='noopener noreferrer'
