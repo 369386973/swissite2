@@ -4,7 +4,7 @@
   }
 }
 /* 在ScrollToTopButton组件所在的CSS文件中或全局样式中添加以下样式 */
-.scroll-to-top-container {
+.scroll-to-top-container.scroll-to-top-button-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -13,7 +13,7 @@
   transition: all 0.3s ease;
 }
 
-.scroll-to-top-container.visible {
+.scroll-to-top-container.scroll-to-top-button-container.visible {
   opacity: 1;
   visibility: visible;
 }
@@ -26,7 +26,7 @@
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-}
+}}
 .container {
   position: absolute;
   top: 0;
