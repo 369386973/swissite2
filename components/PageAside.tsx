@@ -6,7 +6,7 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import  {ScrollToTopButton  }from './ScrollToTopButton';
+import  ScrollToTopButton  from './ScrollToTopButton';
 
 const App: React.FC = () => {
   return (
