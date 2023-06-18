@@ -29,13 +29,12 @@ const ScrollToTopButton: React.FC = () => {
     });
   };
 
-  return (
-    <div className={`scroll-to-top-container ${isVisible ? 'visible' : ''}`}>
+ return (
+    <div className={`scroll-to-top-container scroll-to-top-button-container ${isVisible ? 'visible' : ''}`}>
       <button className="scroll-to-top-button" onClick={scrollToTop}>
         回到顶部
       </button>
     </div>
   );
-};
 
 export default ScrollToTopButton;
