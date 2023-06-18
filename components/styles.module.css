@@ -3,7 +3,23 @@
     transform: rotate(360deg);
   }
 }
+/* 在ScrollToTopButton组件所在的CSS文件中或全局样式中添加以下样式 */
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.scroll-to-top-button:hover {
+  background-color: #333;
+}
 .container {
   position: absolute;
   top: 0;
