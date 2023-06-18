@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-type MyComponentProps = {};
+interface MyComponentProps {}
 
 const MyComponent: React.FC<MyComponentProps> = () => {
   const [showButton, setShowButton] = useState(false);
