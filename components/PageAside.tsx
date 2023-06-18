@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React, { useEffect, useState }  from 'react'
 
 import { Block, ExtendedRecordMap } from 'notion-types'
 
@@ -6,7 +6,6 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import React, { useEffect, useState } from 'react';
 import ScrollToTopButton from './ScrollToTopButton';
 interface ScrollToTopButtonProps {
   showBelow: number;
