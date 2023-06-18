@@ -6,21 +6,19 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import ScrollToTopButton from './ScrollToTopButton';
+import React from 'react';
+import MyComponent from './components/MyComponent';
 
-
-const MyComponent: React.FC = () => {
+const App: React.FC = () => {
   return (
     <div>
-     <button style={{position: 'fixed', bottom: '20px', right: '20px', zIndex: '9999', backgroundColor: '#000', color: '#fff', border: 'none', padding: '10px', borderRadius: '4px', cursor: 'pointer'}}>
-        
-      </button>
-      <ScrollToTopButton showBelow={1200} />
+     
+      <MyComponent />
     </div>
   );
 };
 
-export default MyComponent;
+export default App;
 
 export const PageAside: React.FC<{
   block: Block
