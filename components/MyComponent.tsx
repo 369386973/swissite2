@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 }
-
-const ScrollToTopButton: React.FC = () => {
+const MyComponent: React.FC = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -56,4 +55,4 @@ const ScrollToTopButton: React.FC = () => {
   );
 };
 
-export default ScrollToTopButton;
+export default MyComponent;
