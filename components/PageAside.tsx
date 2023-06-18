@@ -6,19 +6,21 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import MyComponent from './components/MyComponent.js';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const App: React.FC = () => {
   return (
     <div>
-     
-      <MyComponent />
+      {/* 页面内容 */}
+      {/* ... */}
+      
+      {/* 回到顶部按钮 */}
+      <ScrollToTopButton />
     </div>
   );
 };
 
 export default App;
-
 export const PageAside: React.FC<{
   block: Block
   recordMap: ExtendedRecordMap
