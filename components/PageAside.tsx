@@ -6,18 +6,6 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import styles from './index.less';
-interface BackToTopBtnProps { }
-
-const BackToTopBtn: React.FC<BackToTopBtnProps> = props => {
-
-  return (
-     <div id={styles.backToTop}></div>
-  )
-};
-
-export default BackToTopBtn;
-
 
 
 export const PageAside: React.FC<{
