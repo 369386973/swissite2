@@ -1,0 +1,30 @@
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  width: 42px;
+  height: 42px;
+  background-color: #1088e9;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 40px;
+  cursor: pointer;
+  text-align: center;
+
+  &:before {
+    content: '^';
+    display: block;
+ 
+    font-family: serif, 'Times New Roman', Times;
+  }
+  &:hover:before {
+    font-size: 12px;
+    content: '回顶部';
+    line-height: 42px;
+  }
+}
+
+作者：紫圣
+链接：https://juejin.cn/post/6897181116920496141
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
