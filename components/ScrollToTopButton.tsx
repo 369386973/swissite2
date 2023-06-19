@@ -12,7 +12,7 @@ const ScrollToTopButton: React.FC = () => {
       setIsVisible(false); // 否则隐藏按钮
     }
   };
-
+}
   // 添加滚动事件监听器
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
