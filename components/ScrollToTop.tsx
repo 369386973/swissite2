@@ -1,97 +1,45 @@
+import React, { Component } from 'react';
+class index extends Component {
+    constructor(props:any){
+        super(props)
+        this.state={
+            show:false
+        }
+        this.onScroll = this.onScroll.bind(this)
+    }
+    onScroll = () => {
+        const {show}:any=this.state
+        if (document.documentElement.scrollTop > 100) {
+          this.setState({ show: true })
+        } else{
+          this.setState({ show: false })
+        }
+      }
+    scrollToTop = () => {
+        let scrollToptimer = setInterval(function() {
+            var top = document.body.scrollTop || document.documentElement.scrollTop;
+            var speed = top / 16;
+            document.documentElement.scrollTop -= speed;
+            if (top == 0) {
+              clearInterval(scrollToptimer);
+            }
+          }, 5);
+    }
+    componentDidMount(){
+      window.onscroll = this.onScroll;
+    }
+    render() {
+        const {show}:any=this.state
+        return (
+            <div>
 
-import React, { Component } from "react";
-import "./backToTop.less";
- 
- 
-export default class BackToTop extends Component {
-  n: number = 0
-  start: number = 0
-  time: number = 1000
-  count: number = 0
-  dis: number = 0
-  iTget: number = 0
-  timer: NodeJS.Timeout | null = null
-  a: number = 0
-  cur: number = 0
-  backTop() {
-    if (this.timer) {
-      clearInterval(this.timer)
+                {
+                    show&&<div onClick={()=>{this.scrollToTop()}} className='fanhui'><img src={require("../../zyb_imgs/back_top_Z.png").default} alt="" /></div>
+                }
+                
+            </div>
+        );
     }
-    this.n = 0
-    this.count = Math.floor(this.time / 30)
-    this.start = document.documentElement.scrollTop
-    this.dis = this.iTget - this.start
-    this.timer = setInterval(this.FnRunOne.bind(this),30)
-  }
-  // 匀速进行
-  FnRunOne(){
-    this.n++
-    this.a = this.n / this.count
-    this.cur = this.start + this.dis * this.a
-    document.documentElement.scrollTop = this.cur
-    if (this.n === this.count) {
-      if (this.timer) {
-        clearInterval(this.timer)
-      }
-    }
-    
-  }  
-  // 先加速再减速
-  FnRunTwo(){
-    this.n++
-    this.a = 1-this.n / this.count
-    this.cur = this.start + this.dis * (1-Math.pow(this.a,3))
-    document.documentElement.scrollTop = this.cur
-    if (this.n === this.count) {
-      if (this.timer) {
-        clearInterval(this.timer)
-      }
-    }
-    
-  } 
-  // 先减速再加速
-  FnRunThree(){
-    this.n++
-    this.a = this.n / this.count
-    this.cur = this.start + this.dis * (Math.pow(this.a,3))
-    document.documentElement.scrollTop = this.cur
-    if (this.n === this.count) {
-      if (this.timer) {
-        clearInterval(this.timer)
-      }
-    }
-    
-  }  
-  render() {
-    return (
-      <div className="scroll-box">
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-item"></div>
-        <div className="scroll-button" onClick={this.backTop.bind(this)} >点击返回顶部</div>
-      </div>
-    );
-  }
 }
 
+export default index;
