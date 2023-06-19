@@ -8,16 +8,18 @@ import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
 import  ScrollToTopButton  from './ScrollToTopButton';
 import './styles.module.css';
-const App: React.FC = () => {
+interface BackToTopBtnProps { }
+
+const BackToTopBtn: React.FC<BackToTopBtnProps> = props => {
+
   return (
-    <div className="app-container">
-      
-      <ScrollToTopButton />
-    </div>
-  );
+     <div id={styles.backToTop}></div>
+  )
 };
 
-export default App;
+export default BackToTopBtn;
+
+
 
 export const PageAside: React.FC<{
   block: Block
