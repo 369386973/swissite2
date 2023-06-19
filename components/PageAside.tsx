@@ -6,8 +6,7 @@ import { getPageTweet } from '@/lib/get-page-tweet'
 
 import { PageActions } from './PageActions'
 import { PageSocial } from './PageSocial'
-import  ScrollToTopButton  from './ScrollToTopButton';
-import './styles.module.css';
+import styles from './index.less';
 interface BackToTopBtnProps { }
 
 const BackToTopBtn: React.FC<BackToTopBtnProps> = props => {
